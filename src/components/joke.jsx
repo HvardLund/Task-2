@@ -1,19 +1,33 @@
-import { useState } from "react"
+import { useState } from "react";
 
-function Joke(){
-    const [joke, setJoke] = useState({});
+function Joke() {
+  const [joke, setJoke] = useState({});
+  const roflList = [];
+  const mehList = [];
 
-    const getJoke = () => {
-        fetch("https://v2.jokeapi.dev/joke/Any?type=single").then(
-            response => response.json()).then(result => setJoke(result))
-    }
-    
-    return(
-        <div>
-            <button onClick={getJoke()}>Click for joke</button>
-            <h3>{joke.joke}</h3>
-        </div>
-    )
+  function getJoke() {
+    fetch("https://v2.jokeapi.dev/joke/Any?type=single").then((response) => response.json()).then((result) => {setJoke(result);});
+  }
+
+  function upVote() {
+    roflList.push(joke);
+    getJoke();
+    console.log(roflList);
+  }
+
+  function downVote() {
+    mehList.push(joke);
+    getJoke();
+    console.log(mehList);
+  }
+
+  return (
+    <>
+      <h4>{joke.joke}</h4>
+      <button onClick={upVote}>🤣</button>
+      <button onClick={downVote}>😐</button>
+    </>
+  );
 }
 
-export default Joke
+export default Joke;
