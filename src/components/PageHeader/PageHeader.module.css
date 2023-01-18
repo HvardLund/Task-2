@@ -1,0 +1,38 @@
+.background {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #FFC700;
+    height: 70px;
+    width: 100vw;
+    gap: 10px;
+}
+
+.headerText {
+    font-family:'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: min(60px, 7vw);
+    width: 90vw;
+}
+
+.userIcon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:#222222;
+    border: #222222;
+    border-style: outset;
+    border-width: 2px;
+    height: min(45px, 7vw);
+    width: min(45px, 7vw);
+    margin-right: 10px;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.username {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: min(45px, 7vw);
+    font-weight: normal;
+    color: #FFC700;
+}

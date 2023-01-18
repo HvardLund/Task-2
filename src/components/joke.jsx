@@ -1,24 +1,26 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 function Joke() {
   const [joke, setJoke] = useState({});
-  const roflList = [];
-  const mehList = [];
+  const [roflList, setRoflList] = useState([]);
+  const [mehList, setMehList] = useState([]);
+
+  useEffect(() => {
+    getJoke()
+  },[]);
 
   function getJoke() {
     fetch("https://v2.jokeapi.dev/joke/Any?type=single").then((response) => response.json()).then((result) => {setJoke(result);});
   }
 
   function upVote() {
-    roflList.push(joke);
+    setRoflList(roflList => [...roflList, joke.joke])
     getJoke();
-    console.log(roflList);
   }
 
   function downVote() {
-    mehList.push(joke);
+    setMehList(mehList => [...mehList, joke.joke])
     getJoke();
-    console.log(mehList);
   }
 
   return (
@@ -26,6 +28,9 @@ function Joke() {
       <h4>{joke.joke}</h4>
       <button onClick={upVote}>🤣</button>
       <button onClick={downVote}>😐</button>
+      {(roflList[0] !== undefined)?(
+            <h4>{roflList}</h4>
+      ):(<div>You haven't liked any jokes yet</div>)}
     </>
   );
 }
