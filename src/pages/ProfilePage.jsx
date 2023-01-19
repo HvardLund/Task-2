@@ -1,9 +1,6 @@
-import { NavLink, useNavigate } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 function ProfilePage(){
-    
-    const navigate = useNavigate()
-
     return(
         <div>
             <NavLink to="/translate">{"<Back"}</NavLink>
