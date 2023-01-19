@@ -5,6 +5,7 @@ import TranslationPage from './pages/TranslationPage';
 import PageHeader from './components/PageHeader/PageHeader';
 import ProfilePage from './pages/ProfilePage';
 
+console.log("blabla")
 function App() {
   return (
     <div className="App">
