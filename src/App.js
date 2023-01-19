@@ -10,7 +10,6 @@ function App() {
     <div className="App">
       <BrowserRouter>
       <PageHeader></PageHeader>
-      <NavLink to="/translate">Translation</NavLink>
         <Routes>
           <Route path="/" element={<LoginPage/>}/>
           <Route path="/translate" element={<TranslationPage/>} />
