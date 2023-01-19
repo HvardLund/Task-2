@@ -23,8 +23,8 @@
     border: #222222;
     border-style: outset;
     border-width: 2px;
-    height: min(45px, 7vw);
-    width: min(45px, 7vw);
+    height: min(45px, 6vw);
+    width: min(45px, 6vw);
     margin-right: 10px;
     border-radius: 30px;
     cursor: pointer;
@@ -32,7 +32,7 @@
 
 .username {
     font-family: 'Courier New', Courier, monospace;
-    font-size: min(45px, 7vw);
+    font-size: min(45px, 6vw);
     font-weight: normal;
     color: #FFC700;
 }

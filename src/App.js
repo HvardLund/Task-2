@@ -10,10 +10,9 @@ function App() {
     <div className="App">
       <BrowserRouter>
       <PageHeader></PageHeader>
-      <NavLink to="/login">Login</NavLink>
       <NavLink to="/translate">Translation</NavLink>
         <Routes>
-          <Route path="/login" element={<LoginPage/>}/>
+          <Route path="/" element={<LoginPage/>}/>
           <Route path="/translate" element={<TranslationPage/>} />
           <Route path="/profile" element={<ProfilePage/>}/>
         </Routes>
