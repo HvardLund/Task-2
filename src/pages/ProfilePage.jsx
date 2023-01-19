@@ -1,9 +1,13 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 
 function ProfilePage(){
+    
+    const navigate = useNavigate()
+
     return(
         <div>
-            <NavLink to="/translate">{"<Back"}</NavLink>
+            <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"></link>
+            <i onClick={() => navigate("/translate")} class="material-icons">arrow_back</i>
             <h3>Your profile</h3>
         </div>
     )
