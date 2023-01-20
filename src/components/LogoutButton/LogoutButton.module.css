@@ -1,0 +1,17 @@
+.logoutButton {
+    height: 46px;
+    width: 118px;
+    border-color:  #FFC700;
+    border-style: solid;
+    color:#FFC700;
+    font-size: 20px;
+    background-color: transparent;
+    font-family: 'Courier New', Courier, monospace;
+    cursor: pointer;
+    border-radius: 40px;
+    font-weight: bold;
+}
+
+.logoutButton:hover{
+    box-shadow: inset 0 0 4px #FFC700;
+}
