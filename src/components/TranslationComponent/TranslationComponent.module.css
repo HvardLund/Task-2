@@ -1,0 +1,12 @@
+.inputFieldContainer{
+    height: 40px;
+    border: solid;
+    border-width: 3px;
+    width: 30vw;
+}
+
+.inputField{
+    outline: none;
+    border: none;
+    font-size: 20px;
+}
