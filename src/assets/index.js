@@ -24,6 +24,7 @@ import w from "./signs/w.png"
 import x from "./signs/x.png"
 import y from "./signs/y.png"
 import z from "./signs/z.png"
+import space from "./signs/space.PNG"
 
 const images = {
     "a":a,
@@ -51,7 +52,8 @@ const images = {
     "w":w,
     "x":x,
     "y":y,
-    "z":z
+    "z":z,
+    " ":space
 }
 
 

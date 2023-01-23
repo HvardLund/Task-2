@@ -1,12 +1,66 @@
+.container {
+    width: 80vW;
+    height: 380px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    gap: 20px;
+}
+
 .inputFieldContainer{
-    height: 40px;
-    border: solid;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 50px;
+    border: none;
     border-width: 3px;
-    width: 30vw;
+    width: min(400px, 50vw);
+    padding-right: 15px;
+    padding-left: 15px;
+    border-radius: 30px;
+    background-color: white;
 }
 
 .inputField{
     outline: none;
     border: none;
     font-size: 20px;
+    width: 80%;
+}
+
+.translateButton{
+    background-color: #FFC700;
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+i{
+    color: white;
+}
+
+.translationContainer {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: flex-start;
+    align-content: flex-start;
+    column-gap: 0px;
+    height: 250px;
+    width: 70%;
+    background-color: white;
+    border-radius: 50px;
+    padding: 40px;
+
+}
+
+.sign {
+    display: flex;
+    height: 50px;
+    width: 50px;
 }
