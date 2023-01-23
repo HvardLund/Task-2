@@ -1,7 +1,7 @@
 import { useForm } from "react-hook-form";
 const usernameConfig = {
     required: true,
-    minLength: 2
+    minLength: 3
 }
 
 const LoginForm = () => {
@@ -14,14 +14,36 @@ const LoginForm = () => {
     const onSubmit = (data) => {
         console.log(data)
     }
+    console.log(errors);
+
+    const errorMessage = (() => {
+        if (!errors.username){
+            return null
+        }
+
+        if (errors.username.type === 'required'){
+            return <span> Username is required</span>
+        }
+
+        if (errors.username.type === 'minLength'){
+            return <span> Username is too short</span>
+        }
+    })()
+    
     return (
         <>
             <h2>What's your name?</h2>
             <form onSubmit={ handleSubmit(onSubmit) }>
                 <fieldset>
                     <label htmlFor="username"> Username: </label>
-                    <input type="text" { ...register("username", usernameConfig) } />
+                    <input 
+                    type="text"
+                    placeholder="johndoe"
+                    { ...register("username", usernameConfig) }
+                    />
+                    { errorMessage }
                 </fieldset>
+
                 <button type="submit">Continue</button>
             </form>
         </>
@@ -30,3 +52,5 @@ const LoginForm = () => {
     )
 }
 export default LoginForm;
+
+
