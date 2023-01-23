@@ -1,0 +1,13 @@
+.pageContainer{
+    background-color: #222;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.header{
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+    font-size: min(50px, 6vw);
+}
