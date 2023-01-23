@@ -1,5 +1,5 @@
 import './App.css';
-import { BrowserRouter, NavLink, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import LoginPage from './pages/LoginPage';
 import TranslationPage from './pages/TranslationPage';
 import PageHeader from './components/PageHeader/PageHeader';
