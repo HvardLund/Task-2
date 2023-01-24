@@ -7,7 +7,7 @@ function ProfilePage(){
     return(
         <div>
             <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"></link>
-            <i onClick={() => navigate("/translate")} class="material-icons">arrow_back</i>
+            <i onClick={() => navigate("/translate")} className="material-icons">arrow_back</i>
             <h3>Your profile</h3>
         </div>
     )
