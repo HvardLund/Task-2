@@ -1,12 +1,16 @@
 import styles from "./TranslationComponent.module.css"
 import { useState } from "react"
 import images from "../../assets/index"
+import { useDispatch} from "react-redux"
+import { updateTranslations } from "../../redux-parts/userSLice"
 
 function TranslationComponent() {
     const [inputContent, setInputContent] = useState('')
+    const [displayedText, setDisplayedText] = useState([])
     const updateInputContent = (event) => {setInputContent(event.target.value)}
-    const handleArrowClick = () => {}
+    const handleArrowClick = () => {dispatch(updateTranslations(inputContent)); setDisplayedText(inputContent.split(""))}
     const alphabet = "abcdefghijklmnopqrstuvwxyz ".split("")
+    const dispatch = useDispatch();
 
     return(
         <div className={styles.container}>
@@ -18,7 +22,7 @@ function TranslationComponent() {
                 </div>
             </div>
             <div className={styles.translationContainer}>
-                {inputContent.split('').map(element => {
+                {displayedText.map(element => {
                     return alphabet.includes(element) && <img className={styles.sign} alt={"Sign"}src = {images[element]}></img>})}
             </div>
         </div>
