@@ -1,0 +1,12 @@
+.card {
+    height: 40px;
+    width: 100%;
+    background-color: white;
+    color:#222222;
+    font-family: 'Courier New', Courier, monospace;
+    border-radius: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 5%;
+}

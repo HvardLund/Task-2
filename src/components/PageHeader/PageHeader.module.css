@@ -13,26 +13,32 @@
     font-weight: bold;
     font-size: min(60px, 7vw);
     width: 90vw;
+    cursor: pointer;
 }
 
 .userIcon {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color:#222222;
     border: #222222;
-    border-style: outset;
+    border-style: solid;
     border-width: 2px;
     height: min(45px, 6vw);
     width: min(45px, 6vw);
     margin-right: 10px;
     border-radius: 30px;
     cursor: pointer;
+    background-color:#FFC700;
+    color: #222222;
 }
 
 .username {
     font-family: 'Courier New', Courier, monospace;
     font-size: min(45px, 6vw);
     font-weight: normal;
+}
+
+.userIcon:hover{
     color: #FFC700;
+    background-color:#222222;
 }
