@@ -6,17 +6,20 @@ import PageHeader from './components/PageHeader/PageHeader';
 import ProfilePage from './pages/ProfilePage';
 
 function App() {
+
   return (
-    <div className="App">
+
       <BrowserRouter>
+      <div className="App">
       <PageHeader></PageHeader>
         <Routes>
           <Route path="/" element={<LoginPage/>}/>
           <Route path="/translate" element={<TranslationPage/>} />
           <Route path="/profile" element={<ProfilePage/>}/>
         </Routes>
+        </div>
       </BrowserRouter>
-    </div>
+    
   );
 }
 
