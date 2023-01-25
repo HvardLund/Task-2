@@ -8,9 +8,17 @@ function TranslationComponent() {
     const [inputContent, setInputContent] = useState('')
     const [displayedText, setDisplayedText] = useState([])
     const updateInputContent = (event) => {setInputContent(event.target.value)}
-    const handleArrowClick = () => {dispatch(updateTranslations(inputContent)); setDisplayedText(inputContent.split(""))}
+    const handleArrowClick = () => {
+        if(inputContent !== ""){dispatch(updateTranslations(inputContent)); setDisplayedText(inputContent.split(""))}
+    }
     const alphabet = "abcdefghijklmnopqrstuvwxyz ".split("")
     const dispatch = useDispatch();
+
+    let imageKey = 0
+    const generateKey = () => {
+        imageKey+=1
+        return imageKey
+    }
 
     return(
         <div className={styles.container}>
@@ -20,7 +28,7 @@ function TranslationComponent() {
             </div>
             <div className={styles.translationContainer}>
                 {displayedText.map(element => {
-                    return alphabet.includes(element) && <img className={styles.sign} alt={"Sign"} src = {images[element]}></img>})}
+                    return alphabet.includes(element) && <img key={generateKey()} className={styles.sign} alt={"Sign"} src = {images[element]}></img>})}
             </div>
         </div>
     )

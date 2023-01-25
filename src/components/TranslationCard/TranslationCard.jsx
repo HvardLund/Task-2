@@ -1,10 +1,12 @@
 import styles from "./TranslationCard.module.css"
 
-function TranslationCard() {
+function TranslationCard(props) {
+
+    let translation = props.translation
 
     return(
         <div className = {styles.card}>
-            <div>Translation</div>
+            <div className={styles.translationText}>{translation}</div>
         </div>
     )
 }
