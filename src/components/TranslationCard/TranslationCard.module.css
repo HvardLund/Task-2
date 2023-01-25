@@ -1,0 +1,18 @@
+.card {
+    height: 38px;
+    width: 80%;
+    background-color: white;
+    color:#222222;
+    font-family: 'Courier New', Courier, monospace;
+    border-radius: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 5%;   
+}
+
+.translationText{
+    max-width: 80%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

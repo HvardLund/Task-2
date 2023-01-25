@@ -10,7 +10,7 @@ function PageHeader() {
     return(
         <div>
             <div className={styles.background}>
-                <div className={styles.headerText}>TRANSLATE APP THING</div>
+                <div onClick={() => navigate("translate")} className={styles.headerText}>TRANSLATE APP THING</div>
                 <div onClick={() => navigate("profile")} className={styles.userIcon}>
                     <h1 className = {styles.username}>{username.charAt(0).toUpperCase()}</h1>
                 </div>
