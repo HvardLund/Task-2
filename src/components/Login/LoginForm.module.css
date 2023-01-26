@@ -4,6 +4,9 @@
     align-items: center;
     justify-content: center;
     width: 100vw;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    gap: 20px;
 }
 
 .inputField{
@@ -12,6 +15,7 @@
     font-size: 20px;
     width: 85%;
     padding-left: 10px;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 .inputFieldContainer{
@@ -24,6 +28,8 @@
     padding: 15px;
     border-radius: 30px;
     background-color: white;
+    color: #FFC700;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 .translateButton{

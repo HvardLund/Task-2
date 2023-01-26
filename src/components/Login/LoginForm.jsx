@@ -1,9 +1,11 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { loginUser } from "../../api/user";
-import { storageSave } from '../../utils/storage';
-import { useUser } from '../../context/UserContext';
 import styles from './LoginForm.module.css'
+import { useDispatch, useSelector } from "react-redux"
+import { updateUser } from "../../redux-parts/userSLice"
+import { useNavigate } from "react-router-dom"
+import { useEffect } from 'react';
 
 const usernameConfig = {
     required: true,
@@ -13,16 +15,19 @@ const usernameConfig = {
 const LoginForm = () => {
     //Hooks
     const { register, handleSubmit, formState: { errors }} = useForm();
-    const { user, setUser } = useUser()
-    //Local state
+    const [ user, setUser ] = useState(useSelector((state) => state.updateUser))
     const [ loading, setLoading ] = useState(false)
     const [apiError, setApiError ] = useState(null)
 
-    //Side effects
-    useEffect(() => {
-        console.log("User has changed", user)
+    const dispatch = useDispatch();
+    const navigate = useNavigate()
 
-    }, [ user ]) //Empty Deps - Only run once
+    useEffect(() => {
+        if (user.id !== 0){
+            navigate('/translate')
+            dispatch(updateUser(user))
+        }
+    }, [ user, navigate, dispatch])
 
     //Event handlers
     const onSubmit = async ({ username }) => {
@@ -32,11 +37,12 @@ const LoginForm = () => {
             setApiError(error)
         }
         if (userResponse !== null){
-            storageSave('translation-user', userResponse)
             setUser(userResponse)
         }
         setLoading(false);
     };
+
+    
 
     //Render functions
     const errorMessage = (() => {
@@ -65,10 +71,10 @@ const LoginForm = () => {
                     className={styles.inputField}
                     maxLength = {20}
                     />
-                    <button type ="submit" disabled={ loading} className={styles.translateButton}>{'>'}</button>
+                    <button type ="submit" disabled={ loading } className={styles.translateButton}>{'>'}</button>
                 </fieldset>
                 { errorMessage }
-            { loading && <p>Logging in...</p>}
+            { loading && <p>Logging in this might take take a few seconds...</p>}
             { apiError && <p> { apiError }</p> }
             </form>
         </>
