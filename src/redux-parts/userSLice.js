@@ -12,6 +12,9 @@ export const userSlice = createSlice({
         updateTranslations: (state, action) => {
             state.translations.push(action.payload)
         },
+        clearTranslations:(state) => {
+            state.translations = []
+        },
         updateUser: (state, action) => {
             state.id = action.payload.id
             state.username = action.payload.username
@@ -20,5 +23,5 @@ export const userSlice = createSlice({
     }
 })
 
-export const {updateUser, updateTranslations} = userSlice.actions
+export const {updateUser, updateTranslations, clearTranslations} = userSlice.actions
 export default userSlice.reducer
