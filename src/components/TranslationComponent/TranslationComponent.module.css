@@ -5,17 +5,17 @@
     flex-direction: column;
     align-items: center;
     padding: 10px;
-    gap: 20px;
+    gap: 50px;
 }
 
 .inputFieldContainer{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 50px;
+    min-height: 50px;
     border: none;
     border-width: 3px;
-    width: min(400px, 50vw);
+    width: 60%;
     padding-right: 15px;
     padding-left: 15px;
     border-radius: 30px;
@@ -30,17 +30,24 @@
 }
 
 .translateButton{
-    background-color: #FFC700;
     width: 30px;
     height: 30px;
     border-radius: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     cursor: pointer;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 25px;
+    line-height: 90%;
+    font-weight: bolder;
+    background-color: white;
+    border: #FFC700;
+    border-style: solid;
+    border-width: 2px;
+    color:#FFC700;
 }
 
-i{
+.translateButton:hover{
+    background-color: #FFC700;
     color: white;
 }
 
@@ -56,7 +63,26 @@ i{
     background-color: white;
     border-radius: 50px;
     padding: 40px;
+    overflow-y: auto;
 
+}
+
+.translationContainer::-webkit-scrollbar {
+    width: 5px;
+}
+
+.translationContainer::-webkit-scrollbar-track {
+    height: 20%;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.translationContainer::-webkit-scrollbar-thumb {
+    background:#FFC700;
+}
+
+.translationContainer::-webkit-scrollbar-thumb:hover {
+    background: #ff7b00
 }
 
 .sign {
