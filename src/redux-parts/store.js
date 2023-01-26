@@ -5,5 +5,6 @@ export default configureStore({
     reducer: {
         updateUser: userReducer,
         updateTranslations: userReducer,
+        clearTranslations: userReducer,
     },
 })

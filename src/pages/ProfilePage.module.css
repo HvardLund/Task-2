@@ -25,7 +25,7 @@
     gap: 30px;
     width: max(30%, 300px);
     padding-bottom: 30px;
-    padding-top: 50px;
+    padding-top: 60px;
 }
 
 .header{
@@ -37,6 +37,29 @@
     width: 80%;
     overflow: hidden;
     text-overflow: ellipsis;
+}
+
+.clearButton{
+    height: 30px;
+    width: 100px;
+    border-color:  #FFC700;
+    border-style: solid;
+    color:#FFC700;
+    font-size: 17px;
+    background-color: transparent;
+    font-family: 'Courier New', Courier, monospace;
+    cursor: pointer;
+    border-radius: 40px;
+    font-weight: bold;
+    align-self: flex-end;
+    margin-right: 8%;
+    margin-top: 15px;
+}
+
+.clearButton:hover{
+    color: #222222;
+    background-color: #FFC700;
+
 }
 
 .translationsHeader{
