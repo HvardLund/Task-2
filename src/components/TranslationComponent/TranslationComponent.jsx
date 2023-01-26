@@ -9,7 +9,7 @@ function TranslationComponent() {
     const [displayedText, setDisplayedText] = useState([])
     const updateInputContent = (event) => {setInputContent(event.target.value)}
     const handleArrowClick = () => {
-        if(inputContent !== ""){dispatch(updateTranslations(inputContent)); setDisplayedText(inputContent.split(""))}
+        if(inputContent !== ""){dispatch(updateTranslations(inputContent)); setDisplayedText(inputContent.toLowerCase().split(""))}
     }
     const alphabet = "abcdefghijklmnopqrstuvwxyz ".split("")
     const dispatch = useDispatch();
