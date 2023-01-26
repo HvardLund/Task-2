@@ -1,7 +1,7 @@
 import styles from "./TranslationComponent.module.css"
 import { useState } from "react"
 import images from "../../assets/index"
-import { useDispatch} from "react-redux"
+import { useDispatch } from "react-redux"
 import { updateTranslations } from "../../redux-parts/userSLice"
 
 function TranslationComponent() {
