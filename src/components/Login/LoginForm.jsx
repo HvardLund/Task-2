@@ -74,7 +74,7 @@ const LoginForm = () => {
                     <button type ="submit" disabled={ loading } className={styles.translateButton}>{'>'}</button>
                 </fieldset>
                 { errorMessage }
-            { loading && <p>Logging in this might take take a few seconds...</p>}
+            { loading && <p>Logging in, this might take take a few seconds...</p>}
             { apiError && <p> { apiError }</p> }
             </form>
         </>

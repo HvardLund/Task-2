@@ -1,18 +1,30 @@
 import styles from "./TranslationComponent.module.css"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import images from "../../assets/index"
 import { useDispatch } from "react-redux"
 import { updateTranslations } from "../../redux-parts/userSLice"
+import { storeTranslationData } from "../../api/user";
+import { useSelector } from "react-redux";
 
 function TranslationComponent() {
     const [inputContent, setInputContent] = useState('')
     const [displayedText, setDisplayedText] = useState([])
     const updateInputContent = (event) => {setInputContent(event.target.value)}
-    const handleArrowClick = () => {
-        if(inputContent !== ""){dispatch(updateTranslations(inputContent)); setDisplayedText(inputContent.toLowerCase().split(""))}
-    }
+    const id = useSelector((state) => state.updateUser.id)
+    const translations = useSelector((state) => state.updateUser.translations)
     const alphabet = "abcdefghijklmnopqrstuvwxyz ".split("")
     const dispatch = useDispatch();
+
+    const handleArrowClick = () => {
+        dispatch(updateTranslations(inputContent));
+        
+        setDisplayedText(inputContent.toLowerCase().split(""));
+    }
+
+    useEffect(() => {
+        storeTranslationData(id, translations)
+    }, [translations])
+    
 
     let imageKey = 0
     const generateKey = () => {
