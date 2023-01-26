@@ -2,8 +2,8 @@ import { useState, useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 import { loginUser } from "../../api/user";
 import { storageSave } from '../../utils/storage';
-import { useHistory } from 'react-router-dom';
 import { useUser } from '../../context/UserContext';
+import styles from './LoginForm.module.css'
 
 const usernameConfig = {
     required: true,
@@ -38,7 +38,6 @@ const LoginForm = () => {
         setLoading(false);
     };
 
-    console.log(errors);
     //Render functions
     const errorMessage = (() => {
         if (!errors.username){
@@ -56,19 +55,19 @@ const LoginForm = () => {
     
     return (
         <>
-            <h2>What's your name?</h2>
-            <form onSubmit={ handleSubmit(onSubmit) }>
-                <fieldset>
+            <form className={styles.componentContainer} onSubmit={ handleSubmit(onSubmit) }>
+                <fieldset className={styles.inputFieldContainer}>
                     <label htmlFor="username"> Username: </label>
                     <input 
                     type="text"
-                    placeholder="johndoe"
+                    placeholder="Type your username..."
                     { ...register("username", usernameConfig) }
+                    className={styles.inputField}
+                    maxLength = {20}
                     />
-                    { errorMessage }
+                    <button type ="submit" disabled={ loading} className={styles.translateButton}>{'>'}</button>
                 </fieldset>
-
-                <button type="submit" disabled={ loading}>Continue</button>
+                { errorMessage }
             { loading && <p>Logging in...</p>}
             { apiError && <p> { apiError }</p> }
             </form>

@@ -1,0 +1,49 @@
+.componentContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+}
+
+.inputField{
+    outline: none;
+    border: none;
+    font-size: 20px;
+    width: 85%;
+    padding-left: 10px;
+}
+
+.inputFieldContainer{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    border: none;
+    border-width: 3px;
+    width: min(700px, 70%);
+    padding: 15px;
+    border-radius: 30px;
+    background-color: white;
+}
+
+.translateButton{
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+    cursor: pointer;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 25px;
+    line-height: 90%;
+    font-weight: bolder;
+    background-color: white;
+    border: #FFC700;
+    border-style: solid;
+    border-width: 2px;
+    color:#FFC700;
+}
+
+.translateButton:hover{
+    background-color: #FFC700;
+    color: white;
+}
