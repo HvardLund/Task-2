@@ -15,17 +15,19 @@ function TranslationComponent() {
     const alphabet = "abcdefghijklmnopqrstuvwxyz ".split("")
     const dispatch = useDispatch();
 
+    //When clicking the arrow-button translations in the user slice is updated and the right sign images are displayed
     const handleArrowClick = () => {
         dispatch(updateTranslations(inputContent));
         
         setDisplayedText(inputContent.toLowerCase().split(""));
     }
 
+    //Calling on changes in the translations user slice
     useEffect(() => {
         storeTranslationData(id, translations)
     }, [translations])
     
-
+    //Simple logic for handling keys on the sign images 
     let imageKey = 0
     const generateKey = () => {
         imageKey+=1

@@ -2,6 +2,7 @@ import styles from "./PageHeader.module.css"
 import { useNavigate } from "react-router-dom"
 import { useSelector } from "react-redux";
 
+//header on top of page
 function PageHeader() {
     
     const navigate = useNavigate()

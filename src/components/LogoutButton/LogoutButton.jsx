@@ -8,6 +8,8 @@ function LogoutButton() {
     const navigate = useNavigate()
     const dispatch = useDispatch();
     const user = {id:0, username: "", translations:[]}
+
+    //Clicking the logout button sets the user state to a default logged out. id=0 means that the user is logged out
     const onClick = () => {
         navigate("/");
         dispatch(updateUser(user))

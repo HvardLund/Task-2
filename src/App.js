@@ -8,6 +8,7 @@ import { useSelector } from 'react-redux';
 
 function App() {
 
+  //Used to require authentication on /translate and /profile
   const loggedIn = useSelector((state) => state.updateUser.id) > 0
 
   return (
