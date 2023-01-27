@@ -1,3 +1,23 @@
+# Translation application
+This repository contains the scripts for the translation application given as a mandatory exercise. The functionality of the applications is mainly translation of  latin alphabet into sign language by converting the letters to corresponding sign language hand gestures. 
+
+## Usage
+The environment variables are not added to this repo as a way to getting used with good security practises. However, they are found in this section of the README file. Add the environment variables to a .env file and locate it in the root folder.
+
+The environment variables are: 
+REACT_APP_API_KEY=sverre
+REACT_APP_API_URL=https://leaf-balanced-headlight.glitch.me/translations
+
+After this is done, the application can be launched by the `npm start` command (further description found in the  [Getting Started with Create React App](#getting-started-with-create-react-app) below).
+
+### Authors
+The authors of this work are Håvard Lund and Sverre Vinje. 
+
+
+--------------------------------------------------------------------------------------------
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
