@@ -10,6 +10,8 @@ REACT_APP_API_URL=https://leaf-balanced-headlight.glitch.me/translations
 
 After this is done, the application can be launched with `npm install` followed by `npm start`, both in the root folder (further description found in the  [Getting Started with Create React App](#getting-started-with-create-react-app) below).
 
+The component tree is saved as Component tree.png in the root folder and can be found with the other files here.
+
 ### Authors
 The authors of this work are Håvard Lund and Sverre Vinje. 
 
