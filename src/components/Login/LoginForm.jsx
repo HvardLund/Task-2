@@ -7,6 +7,7 @@ import { updateUser } from "../../redux-parts/userSLice"
 import { useNavigate } from "react-router-dom"
 import { useEffect } from 'react';
 
+//username conditions
 const usernameConfig = {
     required: true,
     minLength: 3
@@ -21,7 +22,8 @@ const LoginForm = () => {
 
     const dispatch = useDispatch();
     const navigate = useNavigate()
-
+    
+    //If user is changed and user is logged in (id !=0) user is redirected to translate page
     useEffect(() => {
         if (user.id !== 0){
             navigate('/translate')

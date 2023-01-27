@@ -56,5 +56,5 @@ const images = {
     " ":space
 }
 
-
+//This file exports a dictionary with all the sign image files used to display translations
 export default images

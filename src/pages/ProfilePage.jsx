@@ -15,11 +15,13 @@ function ProfilePage(){
     const id = useSelector((state) => state.updateUser.id)
     const dispatch = useDispatch();
 
+    //Sets the translations to  be an empty list both in the user slice, and in the backend
     const clearClick = () => {
         dispatch(clearTranslations());
         storeTranslationData(id, [])
     }
     
+    //Simple logic for handling keys on the sign images 
     let cardKey = 0
     const generateKey = () => {
         cardKey+=1

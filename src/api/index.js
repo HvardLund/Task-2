@@ -1,3 +1,4 @@
+//creates headers using the environment variables in the .env file
 const apiKey = process.env.REACT_APP_API_KEY
 export const createHeaders = () => {
     return {
@@ -5,7 +6,3 @@ export const createHeaders = () => {
         'x-api-key': apiKey
     }
 }
-
-//export const handleRespons = () => {
-//
-//}

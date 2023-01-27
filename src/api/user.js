@@ -1,6 +1,7 @@
 import { createHeaders } from "./index" 
 const apiURL = process.env.REACT_APP_API_URL
 
+//methos that checks if user exists upon login
 const checkForUser = async (username) => { 
     try {
         const response = await fetch(`${apiURL}?username=${username}`)
@@ -16,6 +17,7 @@ const checkForUser = async (username) => {
     }
 }
 
+//creates new user in the backend
 const createUser = async (username) => {
     try {
         const response = await fetch(apiURL, {
@@ -38,6 +40,8 @@ const createUser = async (username) => {
     }
 
 }
+
+//Method that updates the list of translations in the user object
 export const storeTranslationData = async (id, translations) =>{
     try {
         const response = await fetch(`${apiURL}/${id}`, {
@@ -61,7 +65,7 @@ export const storeTranslationData = async (id, translations) =>{
 }
 
 
-
+//method that either returns an existsing user, or returns a new one if one already exists
 export const loginUser = async (username) =>{
     const [ checkError, user ] = await checkForUser(username)
 
