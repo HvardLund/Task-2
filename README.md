@@ -8,7 +8,7 @@ The environment variables are:
 REACT_APP_API_KEY=sverre  
 REACT_APP_API_URL=https://leaf-balanced-headlight.glitch.me/translations  
 
-After this is done, the application can be launched by the commands `npm install`, then `npm start`, both in the root folder (further description found in the  [Getting Started with Create React App](#getting-started-with-create-react-app) below).
+After this is done, the application can be launched with `npm install` followed by `npm start`, both in the root folder (further description found in the  [Getting Started with Create React App](#getting-started-with-create-react-app) below).
 
 ### Authors
 The authors of this work are Håvard Lund and Sverre Vinje. 
