@@ -12,6 +12,8 @@ After this is done, the application can be launched with `npm install` followed 
 
 The component tree is saved as Component tree.png in the root folder and can be found with the other files here.
 
+The application is deployed and is available through the following link: https://translate-app-thing.vercel.app/.
+
 ### Authors
 The authors of this work are Håvard Lund and Sverre Vinje. 
 
